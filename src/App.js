@@ -11,7 +11,9 @@ class App extends Component {
 
 
   //Your code here:
-
+  componentDidMount() {
+    this.handleAddTimer()
+  }
 
 
 
@@ -23,13 +25,16 @@ class App extends Component {
   // No need to modify anything in render or the class methods below
   // Unless, of course, you're curious about how it all works
   render() {
+    const style = {
+      backgroundColor: "1px solid red"
+    }
 
     return (
       <div className="App">
         <h1>MultiTimer</h1>
         <button onClick={this.handleAddTimer}>Add New Timer</button>
 
-        <div className="TimerGrid">
+        <div style={style} className="TimerGrid">
           {this.renderTimers()}
         </div>
 
